@@ -89,7 +89,7 @@ mysql -u root -p guest_book < feedback.sql
 
 ### 6. Запуск миграций
 
-Если вы не использовали файл `feedback.sql`, вы можете создать таблицы с помощью миграций Laravel:
+Если вы не использовали файл `guest-book-db.sql`, вы можете создать таблицы с помощью миграций Laravel:
 
 ```bash
 php artisan migrate
