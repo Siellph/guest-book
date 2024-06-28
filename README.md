@@ -21,7 +21,7 @@
 
 Перед началом убедитесь, что выполнены следующие требования:
 
-- PHP >= 8.0
+- PHP >= 8.3
 - Composer
 - MySQL или любая другая база данных, поддерживаемая Laravel
 - Node.js и npm
@@ -64,7 +64,7 @@ php artisan key:generate
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=guest_book
+DB_DATABASE=guest_book_db
 DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
@@ -74,22 +74,22 @@ DB_PASSWORD=your_password
 #### Используя phpMyAdmin
 
 1. Откройте phpMyAdmin в браузере.
-2. Создайте новую базу данных с именем `guest_book`.
-3. Импортируйте файл `feedback.sql`, расположенный в корне проекта, чтобы создать необходимые таблицы:
-   - Выберите базу данных `guest_book`.
+2. Создайте новую базу данных с именем `guest_book_db`.
+3. Импортируйте файл `guest_book_db.sql`, расположенный в корне проекта, чтобы создать необходимые таблицы:
+   - Выберите базу данных `guest_book_db`.
    - Перейдите на вкладку `Импорт`.
-   - Нажмите `Выбрать файл` и выберите файл `feedback.sql`.
+   - Нажмите `Выбрать файл` и выберите файл `guest_book_db.sql`.
    - Нажмите `Выполнить`, чтобы импортировать файл.
 
 Также вы можете использовать командную строку:
 
 ```bash
-mysql -u root -p guest_book < feedback.sql
+mysql -u root -p guest_book_db < guest_book_db.sql
 ```
 
 ### 6. Запуск миграций
 
-Если вы не использовали файл `feedback.sql`, вы можете создать таблицы с помощью миграций Laravel:
+Если вы не использовали файл `guest_book_db.sql`, вы можете создать таблицы с помощью миграций Laravel:
 
 ```bash
 php artisan migrate
